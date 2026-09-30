@@ -346,6 +346,13 @@
             <div class="form-group">
                 <label>Type de prêt</label>
                 <select id="loanType">
+                    <option>Prêt Enseignant</option>
+                    <option>Prêt Infirmier</option>
+                    <option>Prêt Médecin</option>
+                    <option>Prêt Agent de Police</option>
+                    <option>Prêt Personnel Militaire</option>
+                    <option>Prêt Employé Salarié</option>
+                    <option>Prêt Particulier Classe Moyenne</option>
                     <option>Prêt Personnel</option>
                     <option>Prêt Commercial</option>
                     <option>Prêt Agricole</option>
@@ -457,6 +464,7 @@
 
         function showSummary() {
             const data = {
+                "Type de prêt": document.getElementById('loanType').value,
                 "Montant": parseInt(document.getElementById('loanAmount').value).toLocaleString('fr-FR') + " XOF",
                 "Durée": document.getElementById('loanTerm').value,
                 "Objet": document.getElementById('loanPurpose').value || '—',
